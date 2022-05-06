@@ -1,2 +1,13 @@
 # IoT-Weather-Station-Website
-Project members:
+
+Components used:
+
+-Arduino Uno
+
+-ESP8266
+
+-DHT11
+
+-MQ135
+
+-bmp180

@@ -1,74 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Station</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" charset="utf-8"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+    />
+    <title>IoT Weather Station Website</title>
 </head>
 <body>
-    <h1>IoT Weather Station</h1>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">DGS</div>
+                <ul class="nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="details.html">Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- Temperature & Humditiy Container -->
-<div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="box">
-                    <h4>Temperature</h4>
-                    <!-- Temperature value output -->
-                    <div id="temperature_value">
-                        <p>Waiting..</p>
-                    </div>
-                    <iframe width="450" height="260" style="border: 1px solid #cccccc;"
-                        src="https://thingspeak.com/channels/1719973/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-                    </div>
-            </div>
-            <div class="col">
-                <div class="box">
-                    <h4>Humidity</h4>
-                    <!-- Humidity value output -->
-                    <div id="humidity_value">
-                        <p>Waiting..</p>
-                    </div>
-                    <iframe width="468" height="260" style="border:none;box-shadow:1px 1px 10px 0px black;font-family: Verdana"
-                        src="https://thingspeak.com/channels/<YourChannelID>/charts/3?bgcolor=%23ffffff&color=%230000000&dynamic=true&api_key=<YourAPIKey>&results=60&type=line&update=15"></iframe>
-                </div>
-            </div>            
+    <!-- HEADER CONTAINER-->
+    <header class="header">
+    <div class="container">
+        <div>
+        <h1>IoT Weather Station Project</h1>
+        <p>A weather station can be described as an instrument or device,
+        which provides us with the information of the weather in our neighbouring environment</p>
+        </div>
+        <img src="polar-188.png" alt="" />
     </div>
+    </header>
 
-    <!-- Air Quality & Pressure Container -->
-    <div class="row">
-        <div class="col">
-            <div class="box">
-                <h4>Air Quality</h4>
-                <!-- Air Quality value output -->
-                <div id="airQuality_value">
-                    <p>Waiting..</p>
-                </div>
-                <iframe width="468" height="260" style="border:none;box-shadow:1px 1px 10px 0px black;font-family: Verdana"
-                    src="https://thingspeak.com/channels/<YourChannelID>/charts/3?bgcolor=%23ffffff&color=%230000000&dynamic=true&api_key=<YourAPIKey>&results=60&type=line&update=15"></iframe>
+    <!-- BOXES CONTAINER --> 
+    <section class="boxes">       
+    <div class="container">
+
+        <!-- Temperature Box -->
+        <div class="box">
+        <h2><i class="fas fa-thermometer-half"></i> Temperature</h2>
+        <div id="temperature_value">
+            <p>Waiting..</p>
+        </div>
+        </div>
+
+        <!-- Humidity Box -->
+        <div class="box">
+        <h2><i class="fas fa-humidity"></i> Humidity</h2>
+        <div id="humidity_value">
+            <p>Waiting..</p>
+        </div>
+        </div>
+
+        <!-- Pressure Box -->
+        <div class="box">
+        <h2><i class="fas fa-tachometer-alt"></i> Pressure</h2>
+        <div id="pressure_value">
+            <p>Waiting..</p>
+        </div>
+        </div>
+
+        <!-- Air Quality Box -->
+        <div class="box">
+        <h2><i class="fas fa-wind"></i> Air Quality</h2>
+        <div id="airquality_value">
+            <p>Waiting..</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- FOOTER CONTAINER -->
+    <footer>
+        <div class="container">
+            <div>
+            <p>Project supervised by: Dr. Cherine Fathy & Eng. Marwan Nour</p>
+            <p>Team members: Ibrahim Kabbash, Yara Ahmed, Mazen Yousry, Marwan Sherif</p>
             </div>
         </div>
-        <div class="col">
-            <div class="box">
-                <h4>Pressure</h4>
-                <!-- Pressure value output -->
-                <div id="pressure_value">
-                    <p>Waiting..</p>
-                </div>
-                <iframe width="468" height="260" style="border:none;box-shadow:1px 1px 10px 0px black;font-family: Verdana"
-                    src="https://thingspeak.com/channels/<YourChannelID>/charts/3?bgcolor=%23ffffff&color=%230000000&dynamic=true&api_key=<YourAPIKey>&results=60&type=line&update=15"></iframe>
-            </div>
-        </div>    
-    </div>
-</div>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <script src="main.js" charset="utf-8"></script>
 </body>
 </html>
