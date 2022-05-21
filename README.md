@@ -2,20 +2,19 @@
 
 Components used:
 
--Arduino Uno
-
 -ESP8266 (Node MCU)
 
--DHT11
+-DHT11 (Temperature & Humidity Sensor)
 
--MQ135
+-MQ135 (Gas Sensor for Air Quality)
 
--bmp180
+-BMP180 (Pressure Sensor)
 
 
+![schematic](Schematic.png)
 
-IMPORTANT LINK FOR ESP8266:
+To get the NodeMCU library go to the following link: https://arduino.esp8266.com/Arduino/versions/2.1.0-rc1/doc/installing.html
 
-https://arduino.esp8266.com/Arduino/versions/2.1.0-rc1/doc/installing.html
+Then be sure to select NodeMCU V1.0 from the board section in Arduino.
 
-And download Adafruit for BMP180 from Arduino's library management
+And download Adafruit for BMP180 from Arduino's library management.

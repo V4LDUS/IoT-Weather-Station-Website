@@ -7,7 +7,7 @@
 
 // replace with your channel’s thingspeak API key,
 const char * myWriteAPIKey = "Q58DRQBUL54NGFNT";
-unsigned long myChannelNumber = 762208; //Replace it with your channel ID
+unsigned long myChannelNumber = 1719973; //Replace it with your channel ID
 const char* ssid = "Valdus' Internet";
 const char* password = "16691669";
 const char* server = "api.thingspeak.com";
@@ -26,7 +26,7 @@ void setup() {
  // ENTIRE PROGRAM WON'T RUN UNTIL THE BMP IS CONNECTED
  if (!bmp.begin())
   {
-   Serial.println("BMP180 Sensor not found ! ! !");
+   Serial.println("BMP180 Sensor not found!");
     while (1) { }
   }
 
@@ -54,7 +54,7 @@ void setup() {
 
 void loop() {  
 
-float Humidity = 100 - dht.readHumidity();
+float Humidity = dht.readHumidity();
 float Temperature = dht.readTemperature();
 int Pressure = bmp.readPressure();
 float gasSensor = analogRead(A0);
@@ -65,7 +65,8 @@ Serial.println("Failed to read from DHT sensor!");
 
 if (isnan(gasSensor)) {
   Serial.println("Failed to read from MQ-135 sensor!");
-  return; }
+  return;
+}
 
 Serial.print("Temperature: ");
 Serial.print(Temperature);
